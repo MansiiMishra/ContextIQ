@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "ContextIQ — Prompt & Context Assistant",
+  "version": "0.1.2",
+  "description": "Estimate draft size, review conservative prompt optimizations, and understand visible conversation context. Everything runs locally.",
+  "permissions": [],
+  "host_permissions": [],
+  "content_scripts": [
+    {
+      "matches": ["https://chatgpt.com/*"],
+      "js": ["core.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": { "default_title": "ContextIQ runs on chatgpt.com" }
+}
